@@ -1,0 +1,11 @@
+[dotfiles]
+repository = ~/local/dotfiles
+
+ignore = [
+    '.git',
+    '.gitignore',
+    '*.swp']
+
+externals = {
+    '.adobe':       '/tmp',
+    '.macromedia':  '/tmp'}
