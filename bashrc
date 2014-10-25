@@ -81,7 +81,8 @@ load_script_if_exist /etc/profile.d/vte.sh
 ## powerline
 
 if [[ "$TERM" == xterm* ]]; then
-    load_script_if_exist /usr/share/powerline/bindings/bash/powerline.sh
+    load_script_if_exist /usr/share/powerline/bindings/bash/powerline.sh || \
+    load_script_if_exist $HOME/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 fi
 
 
