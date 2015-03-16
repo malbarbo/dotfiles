@@ -31,11 +31,11 @@ shopt -s checkwinsize
 
 # enable completion
 if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
+        . /usr/share/bash-completion/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+        . /etc/bash_completion
+    fi
 fi
 
 
@@ -51,8 +51,6 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 load_script_if_exist $HOME/.nix-profile/etc/profile.d/nix.sh
-
-export MANPATH=$NIX_LINK/share/man:$MANPATH
 
 ##############
 ## alias
@@ -73,7 +71,7 @@ alias rm='rm -i'
 ## shell prompt
 
 if [[ "$TERM" == xterm* ]]; then
-    export TERM=screen-256color
+    export TERM=xterm-256color
     load_script_if_exist $HOME/.shell_prompt.sh
 fi
 
