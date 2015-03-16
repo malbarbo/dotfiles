@@ -50,16 +50,16 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-if [ -e $HOME/.nix-profile/bin ]; then
-    export PATH=$HOME/.nix-profile/bin:$PATH
-fi
+load_script_if_exist $HOME/.nix-profile/etc/profile.d/nix.sh
+
+export MANPATH=$NIX_LINK/share/man:$MANPATH
 
 ##############
 ## alias
 
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
+    alias ls='ls --color=auto --group-directories-first'
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
@@ -69,22 +69,14 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
 
-
 ##############
-## terminal
-
-# load settings for vte based terminal (e.g. gnome-terminal)
-load_script_if_exist /etc/profile.d/vte.sh
-
-
-##############
-## powerline
+## shell prompt
 
 if [[ "$TERM" == xterm* ]]; then
-    load_script_if_exist /usr/share/powerline/bindings/bash/powerline.sh
+    export TERM=screen-256color
+    load_script_if_exist $HOME/.shell_prompt.sh
 fi
-
 
 ##############
 ## lesspipe
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh /usr/bin/lesspipe)"
+[-x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh /usr/bin/lesspipe)"
