@@ -1,0 +1,12 @@
+[org/gnome/desktop/media-handling]
+autorun-never=true
+
+[org/gnome/desktop/interface]
+clock-show-date=true
+
+[org/gnome/desktop/input-sources]
+sources=[('xkb', 'br'), ('xkb', 'br+nodeadkeys')]
+
+[org/gnome/desktop/wm/preferences]
+button-layout=':minimize,maximize,close'
+

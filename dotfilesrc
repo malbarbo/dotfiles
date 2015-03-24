@@ -1,12 +1,17 @@
 [dotfiles]
-repository = ~/local/dotfiles
+repository = ~/.dotfiles
 
 ignore = [
     'README.md',
+    'local',
+    'dconf',
     '.git',
     '.gitignore',
     '*.swp']
 
 externals = {
     '.adobe':       '/tmp',
-    '.macromedia':  '/tmp'}
+    '.macromedia':  '/tmp',
+    '.dvdcss':      '/tmp',
+    '.dbus':        '/tmp',
+    '.pip':         '/tmp'}

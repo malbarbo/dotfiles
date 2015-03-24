@@ -1,0 +1,3 @@
+#!/bin/sh
+
+cat ~/local/dconf/* | dconf load /
