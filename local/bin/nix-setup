@@ -1,0 +1,7 @@
+#!/bin/sh
+
+set -e
+
+curl https://nixos.org/nix/install | sh
+
+nix-env -i $(cat ~/pkg-lists/nix)
