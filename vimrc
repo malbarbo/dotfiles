@@ -1,4 +1,5 @@
 set nocompatible
+filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
@@ -20,6 +21,8 @@ Plugin 'edkolev/promptline.vim'
 Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/vimproc.vim'
 call vundle#end()
+
+filetype plugin indent on
 
 set t_Co=256
 set et
