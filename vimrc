@@ -25,6 +25,7 @@ set t_Co=256
 set et
 set ts=4
 set sw=4
+set background=dark
 let mapleader = ' '
 
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
