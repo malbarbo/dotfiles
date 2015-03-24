@@ -1,0 +1,26 @@
+# Base
+gnome
+chromium
+chromium-l10n
+iceweasel
+iceweasel-l10n-pt-br
+libreoffice-gnome
+libreoffice-l10n-pt-br
+openjdk-7-jre
+system-config-printer
+
+# Media
+handbrake-cli
+mediainfo
+tvnamer
+vlc
+
+# Dev
+ipython-notebook
+ipython3-notebook
+pandoc
+
+# Windows
+wine32:i386
+cabextract
+unrar

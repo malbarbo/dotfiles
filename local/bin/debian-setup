@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -e
+
+SRC=local/pkg-lists/debian
+
+if [[ "$*" =~ reset ]]; then
+    debian-reset
+fi
+
+for f in $*; do
+    if [[ $f == reset ]]; then
+        continue
+    fi
+    cat $SRC/$f | aptitute install -y
+done

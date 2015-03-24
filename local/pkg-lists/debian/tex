@@ -1,0 +1,8 @@
+biber
+latexmk
+scons
+texlive
+texlive-bibtex-extra
+texlive-fonts-extra
+texlive-lang-portuguese
+texlive-latex-extra

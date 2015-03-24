@@ -1,0 +1,36 @@
+# System
+encfs
+firmware-realtek
+hdparm
+htop
+lvm2
+qemu-kvm
+
+# Net
+rsync
+nmap
+ntp
+pagekite
+ssh
+
+# Dev
+build-essential
+clang
+cmake
+git
+pkg-config
+python3
+python3-pip
+python-dev
+python-pip
+tmux
+vim-nox
+
+# Utils
+apt-file
+aspell
+aspell-pt-br
+pwgen
+tree
+unzip
+zip

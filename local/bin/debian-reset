@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+echo Installing Base system + standard
+aptitude search '~prequired~pimportant~pstandard' -F '%p' | xargs aptitude install
+aptitude search '~prequired~pimportant~pstandard' -F '%p' | xargs aptitude unmarkauto
+
+KEEP='linux|pi|ssh|vim|firmware'
+echo "Uninstalling extra and optional packages (keeping '$KEEP')"
+aptitude search '~i!~prequired!~pimportant!~pstandard' -F '%p' | egrep -v $KEEP | xargs aptitude markauto
