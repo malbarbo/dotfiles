@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -e
+
+if [ ! -f local ]; then
+    ln -s .dotfiles/local local
+fi
+
+PATH=$HOME/local/bin:$HOME/.local/bin
+
+python3-setup && dotfiles --config .dotfiles/dotfilesrc --sync
+
+vim-setup
