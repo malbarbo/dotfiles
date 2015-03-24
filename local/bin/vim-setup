@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+vim +PluginInstall +qall
+
+cd ~/.vim/bundle/vimproc.vim/ && make
+
+cd ~/.vim/bundle/YouCompleteMe/ && ./install.sh --clang-completer
