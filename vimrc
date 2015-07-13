@@ -49,3 +49,6 @@ let g:better_whitespace_filetypes_blacklist = ['unite']
 
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'powerlineish'
+
+set undofile                " Save undo's after file closes
+set undodir=$HOME/.vim/undo " where to save undo histories
