@@ -2,8 +2,11 @@
 
 set -e
 
+echo "Installing vim plugins"
 vim +PluginInstall +qall
 
+echo "Compiling vimproc"
 cd ~/.vim/bundle/vimproc.vim/ && make
 
+echo "Compiling YouCompleteMe"
 cd ~/.vim/bundle/YouCompleteMe/ && ./install.sh --clang-completer
