@@ -2,12 +2,19 @@
 
 set -e
 
-if [ ! -f local ]; then
+if [ ! -e local ]; then
     ln -s .dotfiles/local local
 fi
 
-PATH=$HOME/local/bin:$HOME/.local/bin
+echo "Installing pytho3-pip"
+sudo aptitude install python3-pip
 
-python3-setup && dotfiles --config .dotfiles/dotfilesrc --sync
+echo "Installing dotfiles"
+pip3 install --user --upgrade dotfiles
 
-vim-setup
+echo "Running .local/bin/dotfiles --config .dotfiles/dotfilesrc --sync"
+.local/bin/dotfiles --config .dotfiles/dotfilesrc --sync
+
+echo
+echo "Restart your shell and try other setups:"
+ls local/bin/*setup
