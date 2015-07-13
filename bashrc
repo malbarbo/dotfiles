@@ -50,7 +50,11 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-load_script_if_exist $HOME/.nix-profile/etc/profile.d/nix.sh
+
+##############
+## variables
+EDITOR=vim
+
 
 ##############
 ## alias
@@ -67,16 +71,24 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
 
+
 ##############
 ## shell prompt
+
+load_script_if_exist /etc/profile.d/vte.sh
 
 if [[ "$TERM" == xterm* ]]; then
     export TERM=xterm-256color
     load_script_if_exist $HOME/.shell_prompt.sh
 fi
 
+
 ##############
-## lesspipe
+## nix
+load_script_if_exist $HOME/.nix-profile/etc/profile.d/nix.sh
+
+
+##############
+## others
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh /usr/bin/lesspipe)"
 
-EDITOR=vim
