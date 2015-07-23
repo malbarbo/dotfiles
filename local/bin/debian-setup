@@ -2,7 +2,16 @@
 
 set -e
 
-SRC=local/pkg-lists/debian
+SRC=$HOME/local/pkg-lists/debian
+
+if [ $# -eq 0 ]; then
+    echo -n "Usage: $0 reset"
+    for f in $SRC/*; do
+        echo -n "|$(basename $f)"
+    done
+    echo
+    exit
+fi
 
 if [[ "$*" =~ reset ]]; then
     debian-reset
@@ -12,5 +21,6 @@ for f in $*; do
     if [[ $f == reset ]]; then
         continue
     fi
-    cat $SRC/$f | aptitute install -y
+    echo "cat $SRC/$f | egrep -v '^#' | sudo xargs aptitude install -y"
+    cat $SRC/$f | egrep -v '^#' | sudo xargs aptitude install -y
 done
