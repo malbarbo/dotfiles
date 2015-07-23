@@ -53,7 +53,7 @@ fi
 
 ##############
 ## variables
-EDITOR=vim
+export EDITOR=vim
 
 
 ##############
