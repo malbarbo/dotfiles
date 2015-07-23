@@ -12,6 +12,7 @@ tmux
 
 # Net
 rsync
+netcat-openbsd
 nmap
 ntp
 pagekite
