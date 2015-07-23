@@ -8,6 +8,7 @@ libreoffice-gnome
 libreoffice-l10n-pt-br
 openjdk-7-jre
 system-config-printer
+fonts-powerline
 
 # Media
 handbrake-cli
