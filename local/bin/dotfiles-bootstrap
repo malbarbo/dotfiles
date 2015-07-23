@@ -13,7 +13,7 @@ echo "Installing dotfiles"
 pip3 install --user --upgrade dotfiles
 
 echo "Running .local/bin/dotfiles --config .dotfiles/dotfilesrc --sync"
-.local/bin/dotfiles --config .dotfiles/dotfilesrc --sync
+.local/bin/dotfiles --config .dotfiles/dotfilesrc --sync || true
 
 echo
 echo "Restart your shell and try other setups:"
