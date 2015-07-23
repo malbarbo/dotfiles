@@ -3,10 +3,7 @@
 favorite-apps=['gnome-terminal.desktop', 'iceweasel.desktop', 'chromium.desktop', 'org.gnome.Nautilus.desktop', 'gnome-calculator.desktop' ]
 
 [org/gnome/shell]
-enabled-extensions=['apps-menu@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'systemMonitor@gnome-shell-extensions.gcampax.github.com', 'openweather-extension@jenslody.de']
-# 'drive-menu@gnome-shell-extensions.gcampax.github.com',
-# 'alternate-tab@gnome-shell-extensions.gcampax.github.com'
-# 'window-list@gnome-shell-extensions.gcampax.github.com'
+enabled-extensions=['apps-menu@gnome-shell-extensions.gcampax.github.com', 'systemMonitor@gnome-shell-extensions.gcampax.github.com', 'openweather-extension@jenslody.de', 'freon@UshakovVasilii_Github.yahoo.com', 'hibernate-status@dromi', 'wikipedia_search_provider@awamper.gmail.com', 'SmallPanelIcon@camporez.com', 'remove-dropdown-arrows@mpdeimos.com', 'unitylike-hotkey@webgyerek.net', 'battery-percentage@nohales.org', 'autohide-battery@sitnik.ru']
 
 [org/gnome/shell/extensions/openweather]
 show-comment-in-panel=true
