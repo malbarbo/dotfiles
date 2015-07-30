@@ -1,6 +1,8 @@
 [dotfiles]
 repository = ~/.dotfiles
 
+packages = ['ssh']
+
 ignore = [
     'README.md',
     'local',
