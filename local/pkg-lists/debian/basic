@@ -5,6 +5,7 @@ firmware-realtek
 hdparm
 htop
 lvm2
+ntp
 qemu-kvm
 smartmontools
 sudo
