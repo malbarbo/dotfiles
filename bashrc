@@ -14,6 +14,12 @@ load_script_if_exist() {
     [[ -s "$1" ]] && . "$1"
 }
 
+add_path_if_exist() {
+    if [ -d "$1" ] ; then
+        PATH="$1:$PATH"
+    fi
+}
+
 ##############
 ## bash
 
@@ -42,14 +48,8 @@ fi
 ##############
 ## path
 
-if [ -d "$HOME/local/bin" ] ; then
-    PATH="$HOME/local/bin:$PATH"
-fi
-
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
-
+add_path_if_exist "$HOME/local/bin";
+add_path_if_exist "$HOME/.local/bin";
 
 ##############
 ## variables
