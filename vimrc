@@ -20,6 +20,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'JuliaLang/julia-vim'
 Plugin 'rust-lang/rust.vim'
+Plugin 'Chiel92/vim-autoformat'
 Plugin 'pangloss/vim-javascript'
 Plugin 'cespare/vim-toml'
 call vundle#end()
@@ -51,6 +52,8 @@ let g:better_whitespace_filetypes_blacklist = ['unite']
 
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'powerlineish'
+
+let g:pandoc#modules#disabled = ["folding"]
 
 set undofile                " Save undo's after file closes
 set undodir=$HOME/.vim/undo " where to save undo histories
