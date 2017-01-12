@@ -50,6 +50,7 @@ fi
 
 add_path_if_exist "$HOME/local/bin";
 add_path_if_exist "$HOME/.local/bin";
+add_path_if_exist "$HOME/.cargo/bin";
 
 ##############
 ## variables
