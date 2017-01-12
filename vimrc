@@ -35,6 +35,8 @@ set sw=4
 set background=dark
 let mapleader = ' '
 
+nnoremap <leader>d :YcmCompleter GoTo<CR>
+
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 
@@ -55,6 +57,8 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = 'powerlineish'
 
 let g:pandoc#modules#disabled = ["folding"]
+
+let g:ycm_rust_src_path = substitute(system('rustc --print sysroot'), '\n\+$', '', '') . '/lib/rustlib/src/rust/src'
 
 set undofile                " Save undo's after file closes
 set undodir=$HOME/.vim/undo " where to save undo histories
