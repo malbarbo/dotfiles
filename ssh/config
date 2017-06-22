@@ -1,4 +1,4 @@
-Host noah pi t430 drcopper
+Host noah nexus4 pi t430 drcopper
     Hostname %h.malbarbo.pro.br
 
 Host *.malbarbo.pro.br
