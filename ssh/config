@@ -1,9 +1,6 @@
 Host noah nexus4 pi t430 drcopper
-    Hostname %h.malbarbo.pro.br
-
-Host *.malbarbo.pro.br
     CheckHostIp no
-    ProxyCommand /bin/nc -X connect -x malbarbo.pro.br:443 %h %p
+    ProxyCommand /bin/nc -X connect -x malbarbo.pro.br:443 %h.malbarbo.pro.br %p
 
 Host din
     Hostname seringueira.din.uem.br
