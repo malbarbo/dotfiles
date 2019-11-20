@@ -1,9 +1,14 @@
 Host noah nexus4 pi t430 drcopper
     CheckHostIp no
-    ProxyCommand /bin/nc -X connect -x malbarbo.pro.br:443 %h.malbarbo.pro.br %p
+    ProxyCommand /bin/nc -X connect -x malbarbo.pro.br:444 %h.malbarbo.pro.br %p
 
 Host din
     Hostname seringueira.din.uem.br
 
 Host pitomba
     ProxyCommand ssh din nc -q0 pitomba 22
+
+Host sleal01
+    ProxyCommand ssh din nc -q0 10.30.11.62 22
+
+Host malbarbo.pro.br
