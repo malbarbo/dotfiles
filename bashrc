@@ -11,7 +11,9 @@ esac
 ## functions
 
 load_script_if_exist() {
-    [[ -s "$1" ]] && . "$1"
+    if [[ -s "$1" ]]; then
+        . "$1"
+    fi
 }
 
 add_path_if_exist() {
@@ -35,6 +37,13 @@ HISTFILESIZE=10000
 # update the values of LINES and COLUMNS
 shopt -s checkwinsize
 
+##############
+## path
+
+add_path_if_exist "$HOME/local/bin";
+add_path_if_exist "$HOME/.local/bin";
+add_path_if_exist "$HOME/.cargo/bin";
+
 # enable completion
 if ! shopt -oq posix; then
     if [ -f /usr/share/bash-completion/bash_completion ]; then
@@ -42,15 +51,12 @@ if ! shopt -oq posix; then
     elif [ -f /etc/bash_completion ]; then
         . /etc/bash_completion
     fi
+    if [ -d $HOME/.local/share/bash_completion/completions/ ]; then
+        for f in $HOME/.local/share/bash_completion/completions/*; do
+            . $f
+        done
+    fi
 fi
-
-
-##############
-## path
-
-add_path_if_exist "$HOME/local/bin";
-add_path_if_exist "$HOME/.local/bin";
-add_path_if_exist "$HOME/.cargo/bin";
 
 ##############
 ## variables
@@ -87,9 +93,3 @@ fi
 ##############
 ## nix
 load_script_if_exist $HOME/.nix-profile/etc/profile.d/nix.sh
-
-
-##############
-## others
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh /usr/bin/lesspipe)"
-
